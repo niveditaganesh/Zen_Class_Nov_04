@@ -1,0 +1,64 @@
+//Chunk Function 
+
+let arr = [1, 2, 3, 4, 5, 6]; 
+  var b=[],c=[]
+function chunk(arr,n){
+    for(let i=0;i<arr.length;i+=n){
+b.push(arr.slice(i,i+n))
+    }
+    return b;
+}
+console.log(chunk(arr,4))
+---------------------------------------------------------------------------------------------------------------------------------------------
+//Reduce
+
+let arr=[1,2],n=0,sum=0;
+var reduce=(arr,n)=>{
+    for(let i=n;i<arr.length;i++){
+ sum+=arr[i];
+    }
+    return sum;
+}
+console.log(reduce(arr,n))
+---------------------------------------------------------------------------------------------------------------------------------------------
+//Filter:
+
+var users = [
+    { 'user': 'barney', 'age': 30, 'active': true },
+    { 'user': 'fred',   'age': 40, 'active': false }
+  ]; var b=[];var i;
+  var filter=(users)=>{
+      for( i=0;i<users.length;i++){
+if(users[i].age>35){
+    b.push(users[i])
+}}
+return b;
+  }
+  console.log(filter(users))
+---------------------------------------------------------------------------------------------------------------------------------------------
+//Find
+
+var users = [
+        { 'user': 'barney', 'age': 30, 'active': true },
+        { 'user': 'fred',   'age': 40, 'active': false },{ 'user': 'pebbles', 'age': 1,  'active': true }
+
+      ]; var b=[];var i;
+      var find=(users)=>{
+          for( i=0;i<users.length;i++){
+    if(users[i].age<35){
+        return users[i]
+    }}
+    
+      }
+      console.log(find(users))
+---------------------------------------------------------------------------------------------------------------------------------------------
+//Sum
+
+var arr=[1,2,3,4,5],i,tot=0
+var sum=(arr)=>{
+    for(i=0;i<arr.length;i++){
+tot+=arr[i];
+    }
+    return tot;
+}
+console.log(sum(arr))
